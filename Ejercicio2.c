@@ -1,5 +1,9 @@
 #include <stdio.h>
+int mult_ok(int x, int y) {
+    int p = x*y;
+    /* x es 0, o dividir p por x = y */
+    return !x || p/x == y;
+}
 int main() {
-  printf("Hello World!");
-  return 0;
+    mult_ok(5, 6);
 }
