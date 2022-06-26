@@ -1,10 +1,18 @@
 #include <stdio.h>
-int mult_ok(int x, int y) {
-    int p = x*y;
-    /* x es 0, o dividir p por x = y */
-    return p;
+int mult_ok(long x, long y) {
+    long aux = 1;
+    if(x>0 && y>0){
+        while(x>0 || aux>y){
+            x = x*2;
+            aux = aux*2;
+            printf ("%lu\n", aux);
+        }
+    }
+    return aux < y;
+
+   
 }
 int main() {
-    int n = mult_ok(2147483647, 2);
-    printf ("%i\n", n);
+    long n = mult_ok(429496729, 2);
+    printf ("%lu\n", n);
 }
