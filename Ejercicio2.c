@@ -36,8 +36,6 @@ int mult_ok(int64_t x, int64_t y) {
 }
 int main() {
     int64_t n = mult_ok(9223372036854775, 5);
-    int64_t ex = 9223372036854775807;
     printf ("%ld\n", (long)n);
-    printf ("%ld\n", (long)ex);
 
 }
