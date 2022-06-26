@@ -2,7 +2,7 @@
 #include <stdint.h>
 int64_t absoluto(int64_t numero){
     if(numero<0){
-        return numero - (numero*2);
+        return numero - numero - numero;
     }
     else{
         return numero;
@@ -11,15 +11,15 @@ int64_t absoluto(int64_t numero){
 int mult_ok(int64_t x, int64_t y) {
     int64_t absx = absoluto(x);
     int64_t absy = absoluto(y);
-    int64_t contadorx = 1;
-    int64_t contadory = 1;
+    int64_t contadorx = 0;
+    int64_t contadory = 0;
     int64_t auxx = 1;
     int64_t auxy = 1;
-    while(auxx <= absx){
+    while((auxx-1) <= absx){
         auxx = auxx*2;
         contadorx = contadorx + 1;
     }
-     while(auxy <= absy){
+     while((auxy-1) <= absy){
         auxy = auxy*2;
         contadory = contadory + 1;
     }
