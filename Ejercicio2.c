@@ -1,15 +1,20 @@
 #include <stdio.h>
 #include <stdint.h>
 int mult_ok(int64_t x, int64_t y) {
-    int64_t aux = 1;
-    if(x>0 && y>0){
-        while(x>0 && aux<y){
-            x = x*2;
-            aux = aux*2;
-            printf ("%ld\n", (long)aux);
-        }
+    int64_t contadorx = 1;
+    int64_t contadory = 1;
+    int64_t auxx = 1;
+    int64_t auxy = 1;
+    while(auxx <= x){
+        auxx = auxx*2;
+        contadorx = contadorx + 1;
     }
-    return aux > y;
+     while(auxy <= y){
+        auxy = auxy*2;
+        contadory = contadory + 1;
+    }
+    
+    return (contadorx+contadory) < 64;
 
    
 }
