@@ -5,5 +5,6 @@ int mult_ok(int x, int y) {
     return !x || p/x == y;
 }
 int main() {
-    mult_ok(5, 6);
+    int n = mult_ok(2147483647, 6);
+    printf ("%i\n", n);
 }
