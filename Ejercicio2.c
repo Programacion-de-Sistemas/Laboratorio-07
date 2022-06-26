@@ -5,6 +5,6 @@ int mult_ok(int x, int y) {
     return p;
 }
 int main() {
-    int n = mult_ok(2147483647, 6);
+    int n = mult_ok(2147483647, 2);
     printf ("%i\n", n);
 }
