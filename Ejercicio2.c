@@ -2,7 +2,7 @@
 int mult_ok(int x, int y) {
     int p = x*y;
     /* x es 0, o dividir p por x = y */
-    return !x || p/x == y;
+    return p;
 }
 int main() {
     int n = mult_ok(2147483647, 6);
