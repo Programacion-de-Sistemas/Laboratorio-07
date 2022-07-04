@@ -1,9 +1,9 @@
 #include <stdio.h>
-int bitXor(int x, int y) {
-    printf("%i\n",~x);
-    
-  return ~(~(~x & y) & ~(x & ~y));
+int tmin(void) {
+  printf("%i\n",1<<31);
+  return 1<<31;
+
 }
 int main(){
-    bitXor(4,5);
+    tmin();
 }
