@@ -1,9 +1,8 @@
 #include <stdio.h>
-int tmin(void) {
-  printf("%i\n",1<<31);
-  return 1<<31;
-
+int isTmax(int x) {
+  return (!(x+1));
 }
+
 int main(){
-    tmin();
+    printf("%i\n",isTmax(-1));
 }
